@@ -1,0 +1,50 @@
+<ion-content>
+  <div class="header">
+    <ion-icon name="arrow-back" [routerLink]="['/signin']" class="back-button"></ion-icon>
+  </div>
+  <div class="login-container">
+    <div class="sign-up">
+      <h2>Sign Up</h2>
+      <ion-item>
+        <ion-icon name="mail"></ion-icon>
+        <ion-input type="text" placeholder="Username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock-closed"></ion-icon>
+        <ion-input type="password" placeholder="Password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="lock-closed"></ion-icon>
+        <ion-input type="confirmpassword" placeholder="Confirm Password"></ion-input>
+      </ion-item>
+      <ion-button expand="block" class="sign-in-button" fill="clear" [routerLink]="['/tabs/tab1']">SIGN UP</ion-button>
+    </div>
+
+    <div class="google-button">
+      <ion-button class="google" fill="clear" [routerLink]="">
+        <img src="assets/Images/google.png" alt="Google Logo" class="google-logo" width="20" height="20"/>
+        Sign up with Google
+      </ion-button>
+    </div>
+
+    <div class="facebook-button">
+      <ion-button class="facebook" fill="clear" [routerLink]="">
+        <img src="assets/Images/facebook.png" alt="Google Logo" class="google-logo" width="20" height="20"/>
+        Sign up with Facebook
+      </ion-button>
+    </div>
+
+    <div class="register-link">
+      <p>Already have an account? <a [routerLink]="['/signin']">Sign in</a></p>
+    </div>
+  </div>
+
+  <div class="contact-section">
+      <p>Contact Us:</p>
+      <div class="icons">
+        <ion-icon name="mail-outline" class="contact-icon"></ion-icon>
+        <ion-icon name="call-outline" class="contact-icon"></ion-icon>
+        <ion-icon name="location-outline" class="contact-icon"></ion-icon>
+      </div>
+  </div>
+</ion-content>
