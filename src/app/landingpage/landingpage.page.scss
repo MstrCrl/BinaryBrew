@@ -1,59 +1,81 @@
-ion-content {
-    --background: url(/assets/Images/landpage.png) center/cover no-repeat;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; // Align content to the bottom
-    align-items: center;
-    text-align: center;
-    font-family: 'Baloo Bhai 2', cursive; // Ensure the font is consistent
-    padding-bottom: 20px; // Ensure there's some padding at the bottom
-  }
-  
-  .content-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative; // To manage the absolute positioning of button
-  }
-  
-  .button-container {
-    position: absolute; // Ensure the button is placed correctly
-    bottom: 100px; // Position the button 100px above the bottom of the wrapper
-    margin-bottom: -40%;
-  }
-  
-  .get-started-button {
-    background-color: #191e11; // Black background color
-    border-radius: 30px;
-    padding: 0px 50px;
-    font-size: 22px;
-    font-weight: bold;
-    color: white; 
-  
-    ion-icon {
-      margin-left: 12px;
-      color: white; 
-    }
-  }
-  
-  .welcome-section {
-    color: #fff; // White text color
-    padding: 20px; // Add some padding for spacing
-    text-align: center; // Center the text within the div
-    width: 100%; // Full width to ensure proper alignment
-    margin-top: 160%; // Space between the welcome section and the button
-  
-    .icons {
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+
+  color: #3a3a3a; // Text color for readability
+  text-align: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 10%,
+          transparent 90%, rgba(0, 0, 0, 0.4)),
+      #013500; // Green background with gradients on top and bottom
+
+  .stone-shape {
+      width: 80vw; // Increased size (previously 35vw)
+      height: 80vw; // Increased size (previously 35vw)
+      max-width: 500px; // Prevents it from growing too large (previously 200px)
+      max-height: 500px; // Prevents it from growing too large (previously 200px)
+      background: #fff;
+      border-radius: 60% 60% 30% 30% / 90% 90% 30% 30%;
       display: flex;
+      align-items: center;
       justify-content: center;
-      gap: 16px; // Space between icons
-  
-      ion-icon {
-        font-size: 32px; // Adjust the size of the icons
-        color: #191e11; // Pink color for the icons
-      }
-    }
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+      position: relative;
+
+
+      .coffee-image {
+          width: 100%; // Set to 100% of the stone's width
+          height: 120%; // Increased to make the image larger than the stone
+          position: absolute; // To overlap the stone
+          top: -10px; // Moves the top of the bag 10px above the stone
+          left: 0; // Aligns the image to the left side of the stone
+          z-index: 2; // Ensures the image is on top of the stone
+          object-fit: cover; // Ensures the image maintains aspect ratio and fills the area
+
+        }
   }
-  
+
+  .taglines {
+      h1 {
+          font-size: 5vw; // Adjusts dynamically for smaller screens
+          color: white;
+          font-weight: bold;
+          margin-bottom: 10px;
+      }
+
+      p {
+          font-size: 4vw; // Responsive scaling
+
+          color: #ece9e9;
+      }
+  }
+
+  .get-started-button {
+      width: 80%;
+      max-width: 300px;
+      padding: 15px;
+      font-size: 4vw; // Responsive button text
+
+      font-weight: bold;
+      color: #fff;
+      background-color: #011f00; // Darker green for button
+      border: none;
+      border-radius: 25px;
+      text-align: center;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+
+      .get-started-button:hover {
+          background-color: #ffffff; // Slightly darker green on hover
+          color: #011f00;
+          transform: scale(1.05); // Adds a slight zoom effect
+          transition: background-color 0.3s, transform 0.3s; // Smooth transition for hover effect
+      }
+
+  }
+}
