@@ -1,52 +1,45 @@
-<ion-content class="signin">
-  <div class="header">
-    <ion-icon name="arrow-back" [routerLink]="['/landingpage']" class="back-button"></ion-icon>
-  </div>
-  <div class="login-container">
-    <div class="sign-in">
-      <h2>Sign In</h2>
-      <ion-item>
-        <ion-icon name="mail"></ion-icon>
-        <ion-input type="text" placeholder="Username"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-icon name="lock-closed"></ion-icon>
-        <ion-input type="password" placeholder="Password"></ion-input>
-      </ion-item>
-      <ion-button expand="block" class="sign-in-button" fill="clear" [routerLink]="['/home']">SIGN IN</ion-button>
+<ion-content>
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back"></ion-icon>
     </div>
 
-    <div class="forgotpass">
-      <span class="text">Forgot Password?</span>
+    <div id="logo">
+      <img src="assets/Images/logo.png" alt="logo">
     </div>
-
-    <div class="google-button">
-      <ion-button class="google" fill="clear" [routerLink]="">
-        <img src="assets/Images/google.png" alt="Google Logo" class="google-logo" width="20" height="20"/>
-        Sign in with Google
-      </ion-button>
-    </div>
-
-    <div class="facebook-button">
-      <ion-button class="facebook" fill="clear" [routerLink]="">
-        <img src="assets/Images/facebook.png" alt="Google Logo" class="google-logo" width="20" height="20"/>
-        Sign in with Facebook
-      </ion-button>
-    </div>
-    
-    <div class="register-link">
-      <p>Don't have an account? <a [routerLink]="['/signup']">Sign Up</a></p>
-    </div>
+    <h2>APP ICON</h2>
   </div>
 
-  <div class="contact-section">
-    <div class="contact-info">
-      <p>Contact Us:</p>
-      <div class="icons">
-        <ion-icon name="mail-outline" class="contact-icon"></ion-icon>
-        <ion-icon name="call-outline" class="contact-icon"></ion-icon>
-        <ion-icon name="location-outline" class="contact-icon"></ion-icon>
+  <ion-card class="ion-padding">
+    <ion-card-content>
+      <h1>Welcome to App Name.</h1>
+      <p>Discover amaizing things around you.</p>
+      
+      <ion-button expand="block">Sign In</ion-button> 
+      <ion-button expand="block" fill="outline">Sign Up</ion-button>
+
+      
+      <div class="line-text">
+        <span class="text">Or connect using</span>
+        <span class="lines"></span>
+ 
       </div>
-    </div>
-  </div>
+
+
+      <div class="socials">
+        <ion-button class="btn-fb">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button class="btn-tw">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </ion-button>
+        <ion-button class="btn-go">
+          <ion-icon name="logo-google"></ion-icon>
+        </ion-button>
+        <ion-button class="btn-ph">
+          <ion-icon name="call-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
