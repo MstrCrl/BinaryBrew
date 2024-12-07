@@ -94,17 +94,15 @@ ion-item {
   --padding-end: 0;
   
 }
-
-.email-form{
-  margin-top: 100px;
-
+.ion-margin{
+  margin-top: 60px;
 }
 
   ion-card{
     height: 800px;
       box-shadow: none;
       position: absolute;
-      top: 23%;
+      top: 21%;
       left: 5%;
       right: 5%;
       border-radius: 20px;
@@ -189,3 +187,20 @@ ion-item {
       }
   }
 }
+
+#example-modal {
+  --background: white; /* Set modal background color */
+  --border-radius: 10px; /* Apply border radius */
+  color: #1e3a1c;
+
+}
+
+.google-sign-in {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between the icon and text */
+}
+.span{
+  margin-left: 10px;
+}
+
