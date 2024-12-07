@@ -2,12 +2,13 @@ ion-content {
   --background: linear-gradient(135deg, rgb(255, 255, 255), #365E32);
 
   #header {
-    height: 70%;
+    height: 80%;
     background: #225b1e;
     display: flex;
     flex-direction: column;
     color: #fff;
-    border-radius: 0 0 40px 40px;
+    border-radius: 0 0px 80px 80px;
+    
 
     #app-bar {
       height: 60px;
@@ -30,6 +31,7 @@ ion-content {
       align-items: center;
       border-radius: 20px;
       align-self: center;
+      margin-top: -29%;
 
   
 
@@ -47,16 +49,67 @@ ion-content {
       margin-top: 5px;
     }
   }
+  .button-group {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  gap: 10px; /* Add space between buttons */
+  margin-top: -10px; /* Adjust spacing */ 
+  
+}
+
+.button-group ion-button {
+  --border-radius: 20px;
+}
+
+ion-button.sign-up {
+  z-index: 1;
+  width: 200px;
+  margin-left: 40px;
+  position: absolute;
+  text-align: right; 
+  --padding-start: 100px; 
+  --padding-end: 20px; 
+ 
+}
+
+ion-button.sign-in {
+  z-index: 2;
+  width: 120px;
+  margin-left: -100px;
+  position: absolute;
+}
+
+ion-input {
+  --background: transparent; 
+  --border-color: #ccc;
+  --box-shadow: none; 
+  
+}
+
+/* Remove background for ion-item containers */
+ion-item {
+  --background: transparent; 
+  --border-color: transparent; 
+  --padding-start: 0;
+  --padding-end: 0;
+  
+}
+
+.email-form{
+  margin-top: 100px;
+
+}
 
   ion-card{
+    height: 800px;
       box-shadow: none;
       position: absolute;
-      top: 37%;
+      top: 23%;
       left: 5%;
       right: 5%;
       border-radius: 20px;
       --background: #1e3a1c;
-      max-height: 400px;
+      max-height: 450px;
 
       h1{
         font-weight: bold;
@@ -79,14 +132,16 @@ ion-content {
         font-size: 16px;
         letter-spacing: 0;
         font-weight: 400;
+        
       }
       .line-text{
         padding: 2px;
-        margin-top: 40px;
+        margin-top: 0px;
         position: relative;
         height: 20px;
 
         .lines{
+          margin-top: 0px;
           height: 1px;
           background: #858585;
           display: block;
@@ -100,11 +155,12 @@ ion-content {
           font-size: 12px;
           font-weight: 500;
           color: #93A87D;
+          margin-top: 25px;
           
         }
       }
       .socials{
-        margin-top: 18px;
+        margin-top: 30px;
         display: flex;
         justify-content: center;
         margin-bottom: 10px;

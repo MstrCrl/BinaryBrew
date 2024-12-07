@@ -1,31 +1,81 @@
 <ion-content>
   <div id="header">
     <div id="app-bar">
-      <ion-icon name="arrow-back"></ion-icon>
+      <ion-icon name="arrow-back" routerLink="/landingpage"></ion-icon> <!-- back button --> 
     </div>
 
     <div id="logo">
       <img src="assets/Images/logo.png" alt="logo">
     </div>
-    <h2>APP ICON</h2>
   </div>
 
   <ion-card class="ion-padding">
     <ion-card-content>
-      <h1>Welcome to App Name.</h1>
-      <p>Discover amaizing things around you.</p>
-      
-      <ion-button expand="block">Sign In</ion-button> 
-      <ion-button expand="block" fill="outline">Sign Up</ion-button>
 
-      
+      <!-- Button Group -->
+      <div class="button-group">
+        <ion-button class="sign-in" routerLink="/login">Sign In</ion-button>
+        <ion-button class="sign-up" fill="outline" routerLink="/signup">Sign Up</ion-button>
+      </div>
+
+      <!-- Form -->
+      <form [formGroup]="signInForm" class="ion-margin"> 
+        <div class="email-form">
+          <ion-item lines="full">
+            <ion-input formControlName="email" type="text" placeholder="Enter email or username"></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="!signInForm.get('email')?.valid && signInForm.get('email')?.touched">
+            <ion-text class="error" *ngIf="signInForm.get('email')?.hasError('required')">
+              * Please enter email or username
+            </ion-text>
+          </ion-text>
+        </div>
+
+        <div class="password-form">
+          <ion-item lines="full">
+            <ion-icon 
+              [name]="type ? 'eye' : 'eye-off'" 
+              slot="end" 
+              color="dark" 
+              (click)="changeType()">
+            </ion-icon>
+            <ion-input formControlName="password" [type]="type ? 'password' : 'text'" placeholder="Enter password"></ion-input>
+          </ion-item>
+          <ion-text color="danger" *ngIf="!signInForm.get('password')?.valid && signInForm.get('password')?.touched">
+            <ion-text class="error" *ngIf="signInForm.get('password')?.hasError('required')">
+              * Please enter your password
+            </ion-text>
+            <ion-text class="error" *ngIf="!signInForm.get('password')?.hasError('required') && signInForm.get('password')?.hasError('minlength')">
+              * Please enter a password of at least 6 characters
+            </ion-text>
+          </ion-text>
+        </div>
+      </form>
+
+      <p class="forgot-text">
+        <ion-text color="medium">Forgot password?</ion-text>
+      </p>
+
+      <div class="ion-margin-horizontal">
+        <ion-button
+         class="ion-margin-horizontal"
+          size="large" 
+          expand="block" 
+          shape="round" 
+          color="primary"
+          (click)="onSubmit()">
+          <ion-text>Log In</ion-text>
+        </ion-button>
+      </div>
+
       <div class="line-text">
         <span class="text">Or connect using</span>
         <span class="lines"></span>
- 
       </div>
 
+      
 
+      <!-- Social Login Buttons -->
       <div class="socials">
         <ion-button class="btn-fb">
           <ion-icon name="logo-facebook"></ion-icon>
