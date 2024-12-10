@@ -117,7 +117,7 @@
 
       <!-- Social Login Buttons -->
       <div class="socials">
-        <ion-button class="btn-fb">
+        <ion-button class="btn-fb"  id="openfb">
           <ion-icon name="logo-facebook"></ion-icon>
         </ion-button>
         <ion-button class="btn-tw">
@@ -133,3 +133,21 @@
     </ion-card-content>
   </ion-card>
 </ion-content>
+
+<ion-modal id="example-modal" #modal trigger="openfb">
+  <ng-template>
+    <div class="wrapper">
+      <h1>Sign in with Google</h1>
+      <div class="line"></div>
+      <div class="container1">
+        <img src="./assets/Images/logo.png" alt="">
+        <span>Sign In<br>to continue to BinaryBrew</span>
+        <input type="text" placeholder="Email or phone" class="input">
+        <div class="bef">Before using this app you can view BinaryBrew privacy policy and terms of services</div>
+        <div class="cre">create account
+          <ion-button class="btn">Next</ion-button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</ion-modal>
