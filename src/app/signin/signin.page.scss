@@ -26,13 +26,13 @@ ion-content {
     }
 
     #logo {
-
+      position: absolute;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 20px;
       align-self: center;
-      margin-top: -20%;
+      top: 20px;
+
 
   
 
@@ -55,7 +55,7 @@ ion-content {
     justify-content: center;
     gap: 25px;
     margin-top: -5px;
-    
+    margin-bottom: 70px;
   }
   
   .button-group ion-button {
@@ -65,6 +65,7 @@ ion-content {
     --background-activated: #1e4e1d;
     --border-color: #2a6829;
     width: 130px;
+  
   }
   
   .button-group ion-button[fill="outline"] {
@@ -84,6 +85,7 @@ ion-button.sign-up {
   //--padding-end: 20px; 
  
 }
+
 
 ion-button.sign-in {
   z-index: 2;
@@ -125,9 +127,13 @@ ion-item {
   
 }
 
+.signin1{
+  color: #000;;
+}
+
 .ion-margin-horizontal ion-button {
   --background: #2a6829; /* Green background */
-  --color: white;       /* White text */
+  --color: white;       /* White y */
   --background-activated: #1e4e1d; /* Darker green when pressed */
   --border-radius: 20px; /* Rounded corners */
   font-size: 16px;       /* Consistent text size */
@@ -148,6 +154,8 @@ ion-item {
       border-radius: 20px;
       --background: #e7e8e6;
       max-height: 450px;
+      border: #000000;
+      border-width: 10px;
 
       h1{
         font-weight: bold;
@@ -241,5 +249,20 @@ ion-item {
 }
 .span{
   margin-left: 10px;
+}
+
+form.marginme ion-input {
+  --color: black;
+}
+
+form.marginme ion-text {
+  --color: black;
+}
+
+form.marginme .error {
+ --color: red;
+}
+ion-card.ion-padding {
+  border: 1px solid rgb(0, 121, 8) !important;
 }
 
