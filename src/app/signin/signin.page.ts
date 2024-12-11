@@ -7,6 +7,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./signin.page.scss'],
 })
 export class SigninPage implements OnInit {
+
+
+  
   signInForm: FormGroup; // Correct form name
   type = false; // Toggle password visibility
   typeConfirmPassword = false;

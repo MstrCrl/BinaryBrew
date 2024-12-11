@@ -287,58 +287,44 @@ ion-content {
   }
 }
 
-#example-modal {
-  --background: white;
-  /* Set modal background color */
-  --border-radius: 10px;
-  /* Apply border radius */
-  color: #1e3a1c;
-
-}
-
-.google-sign-in {
+//modal 
+.logo-container {
+  padding-left: 15px;
   display: flex;
-  align-items: center;
-  gap: 10px;
-  /* Space between the icon and text */
+  align-items: center; /* Vertically aligns the items */
+  gap: 10px;          /* Space between the logo and the text */
 }
 
-.span {
-  margin-left: 10px;
-}
-
-form.marginme ion-input {
-  --color: black;
-}
-
-form.marginme ion-text {
-  --color: black;
-}
-
-form.marginme .error {
-  --color: red;
-}
-
-ion-card.ion-padding {
-  border: 1px solid rgb(22, 57, 22) !important;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.2) !important;
+.logo {
+  width: 35px; /* Adjust the size of the logo */
+  height: auto;
 
 }
+.container1 {
+  padding: 40px; /* Aligns items horizontally */
 
-//modal fb
-.topmodalfb {
-  display: inline-block;
 }
-
-ion-content::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
+.container1 input{
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  /* Dark overlay with 50% opacity */
-  z-index: -1;
-  /* Ensures the overlay is only on the background, not the content */
+  text-align: center;
+  margin-bottom: 20px;
+  height: 40px;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 10px;
+  font-style: italic;
+}
+.cre{
+  margin-top: 20px;
+  font-weight: bold;
+}
+.cre .btn{
+  margin-left: 70%;
+  border-radius: 20px;
+  font-weight: bold; 
+  --border-radius: 20px;
+  color:#fff;
+}
+ion-checkbox{
+  background-color: #fff;
 }

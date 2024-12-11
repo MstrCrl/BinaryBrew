@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { SigninPageRoutingModule } from './signin-routing.module';
 
 import { SigninPage } from './signin.page';
+import { ProductCardComponent } from '../product-card/product-card.component';  // Import the ProductCardComponent
 
 @NgModule({
   imports: [
@@ -16,6 +17,6 @@ import { SigninPage } from './signin.page';
     IonicModule,
     SigninPageRoutingModule
   ],
-  declarations: [SigninPage]
+  declarations: [SigninPage, ProductCardComponent]  // Add the ProductCardComponent here
 })
 export class SigninPageModule {}
