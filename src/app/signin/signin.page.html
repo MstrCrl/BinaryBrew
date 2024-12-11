@@ -4,13 +4,11 @@
       <ion-icon name="arrow-back" routerLink="/landingpage"></ion-icon> <!-- back button -->
     </div>
 
-    <div id="logo">
-      <img src="assets/Images/logo.png" alt="logo">
-    </div>
   </div>
 
   <ion-card class="ion-padding">
     <ion-card-content>
+      <div class="logo"><img src="/assets/Images/logo.png" alt=""></div>
       <!-- Button Group -->
       <div class="button-group">
         <ion-button class="sign-in" [fill]="!isSignUp ? 'solid' : 'outline'" (click)="switchForm(false)">Sign
@@ -63,50 +61,45 @@
 
           <div class="password-form">
             <ion-item lines="full">
-              <ion-icon [name]="type ? 'eye' : 'eye-off'" slot="end" color="medium" (click)="changeType()">
-              </ion-icon>
-              <ion-input formControlName="Password" [type]="type ? 'password' : 'text'"
-                placeholder="Password"></ion-input>
+              <ion-icon [name]="type ? 'eye' : 'eye-off'" slot="end" color="medium" (click)="changeType()"></ion-icon>
+              <ion-input formControlName="Password" [type]="type ? 'password' : 'text'" placeholder="Password"></ion-input>
             </ion-item>
             <ion-text color="danger" *ngIf="!signInForm.get('password')?.valid && signInForm.get('password')?.touched">
               <ion-text class="error" *ngIf="signInForm.get('password')?.hasError('required')">
                 * Please enter your password
               </ion-text>
-              <ion-text class="error"
-                *ngIf="!signInForm.get('password')?.hasError('required') && signInForm.get('password')?.hasError('minlength')">
+              <ion-text class="error" *ngIf="!signInForm.get('password')?.hasError('required') && signInForm.get('password')?.hasError('minlength')">
                 * Please enter a password of at least 6 characters
               </ion-text>
             </ion-text>
           </div>
+          
           <div class="password-form">
             <ion-item lines="full">
-              <ion-icon [name]="type ? 'eye' : 'eye-off'" slot="end" color="medium" (click)="changeType()">
-              </ion-icon>
-              <ion-input formControlName="password" [type]="type ? 'password' : 'text'"
-                placeholder="Confirm Password"></ion-input>
+              <ion-icon [name]="typeConfirmPassword ? 'eye' : 'eye-off'" slot="end" color="medium" (click)="changeConfirmPasswordType()"></ion-icon>
+              <ion-input formControlName="confirmPassword" [type]="typeConfirmPassword ? 'password' : 'text'" placeholder="Confirm Password"></ion-input>
             </ion-item>
-            <ion-text color="danger" *ngIf="!signInForm.get('password')?.valid && signInForm.get('password')?.touched">
-              <ion-text class="error" *ngIf="signInForm.get('password')?.hasError('required')">
-                * Please enter your password
+            <ion-text color="danger" *ngIf="!signInForm.get('confirmPassword')?.valid && signInForm.get('confirmPassword')?.touched">
+              <ion-text class="error" *ngIf="signInForm.get('confirmPassword')?.hasError('required')">
+                * Please confirm your password
               </ion-text>
-              <ion-text class="error"
-                *ngIf="!signInForm.get('password')?.hasError('required') && signInForm.get('password')?.hasError('minlength')">
+              <ion-text class="error" *ngIf="!signInForm.get('confirmPassword')?.hasError('required') && signInForm.get('confirmPassword')?.hasError('minlength')">
                 * Please enter a password of at least 6 characters
               </ion-text>
             </ion-text>
-          </div>
-
+          </div>          
+  
 
         </div>
       </form>
 
       <p class="forgot-text" *ngIf="!isSignUp">
-        <ion-text color="medium">Forgot password?</ion-text>
+        <ion-text style="color: rgb(38, 38, 38);">Forgot password?</ion-text>
       </p>
 
       <div class="ion-margin-horizontal">
         <ion-button class="ion-margin-horizontal" size="large" expand="block" shape="round" color="primary"
-          (click)="onSubmit()">
+          (click)="onSubmit()" routerLink="/landingpage">
           <ion-text>{{ isSignUp ? 'Sign Up' : 'Log In' }}</ion-text>
         </ion-button>
       </div>

@@ -35,8 +35,18 @@
             left: 0; // Aligns the image to the left side of the stone
             z-index: 2; // Ensures the image is on top of the stone
             object-fit: cover; // Ensures the image maintains aspect ratio and fills the area
-  
+            animation: bounce 5s infinite; /* Apply bounce animation with a 2-second duration and infinite repetition */
+        }
+        
+        /* Keyframes for the bounce effect */
+        @keyframes bounce {
+          0%, 100% {
+            transform: translateY(0); /* Starting and ending position */
           }
+          50% {
+            transform: translateY(-10px); /* Move 10px up at the midpoint */
+          }
+        }
     }
   
     .taglines {
@@ -70,13 +80,25 @@
         cursor: pointer;
         margin-top: 20px;
         transition: background-color 0.3s;
-  
-        .get-started-button:hover {
-            background-color: #ffffff; // Slightly darker green on hover
-            color: #011f00;
-            transform: scale(1.05); // Adds a slight zoom effect
-            transition: background-color 0.3s, transform 0.3s; // Smooth transition for hover effect
-        }
-  
+        animation: waveColor 5s infinite;
+    }
+    
+    /* Keyframes for color wave */
+    @keyframes waveColor {
+      0% {
+        background-color: #4B5A34; /* Darker green */
+      }
+      25% {
+        background-color: #637C47; /* Medium green */
+      }
+      50% {
+        background-color: #7F9F5B; /* Lighter green */
+      }
+      75% {
+        background-color: #637C47; /* Medium green */
+      }
+      100% {
+        background-color: #4B5A34; /* Back to darker green */
+      }
     }
   }

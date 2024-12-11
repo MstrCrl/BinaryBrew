@@ -1,55 +1,64 @@
-
 ion-content {
-  --background:   url(/assets/Images/bottom-pic.jpg) center/cover no-repeat;
+  --background: url(/assets/Images/green.jpg) center/cover no-repeat;
+  position: relative;
 
-  #header {
-    height: 80%;
-    background: #225b1e;
+
+  /* Create a dark overlay */
+
+
+  #app-bar {
     display: flex;
-    flex-direction: column;
-    color: #fff;
-    border-radius: 0 0px 50px 50px;
-    
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    /* Add padding for spacing */
+    font-size: 1.2em;
+    /* Make the app bar text slightly bigger */
+  }
 
-    #app-bar {
-      height: 60px;
-      padding: 0 px;
-      display: flex;
-      margin-left: 10px;
-      color: white;
-      justify-content: space-between;
-      align-items: center;
+  #app-bar ion-icon {
+    font-size: 30px;
+    /* Make the back button icon slightly bigger */
+    color: #949593;
+    /* Optional: change the icon color */
+    cursor: pointer;
+    /* Make the icon clickable */
+    transition: transform 0.2s;
+    /* Optional: smooth transition for hover effect */
+  }
 
-      ion-icon {
-        font-size: 24px;
-      }
-    }
-
-    #logo {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-self: center;
-      top: 20px;
+  /* Hover effect for the back button */
+  #app-bar ion-icon:hover {
+    transform: scale(1.1);
+    /* Slightly enlarge the icon on hover */
+  }
 
 
+  .logo {
+    width: 50%; /* Set logo width */
+    margin: 0 auto; /* Centers the logo horizontally */
+    display: block; /* Ensure the logo is treated as a block-level element */
+    align-items: center; /* Aligns the logo vertically within its container (if flex is used) */
+    text-align: center; /* Ensures content inside is centered */
+    margin-bottom: 10px;
+  }
   
-
-      img {
-        max-width: 30vh;
-      }
-    }
-
-    h2 {
-      text-align: center;
-      font-weight: bold;
-      margin: 0;
-      font-size: 20px;
-      letter-spacing: 1px;
-      margin-top: 5px;
+  /* Media Query for smaller screens */
+  @media (max-width: 768px) {
+    .logo {
+      width: 70%; /* Make logo slightly larger on tablets */
     }
   }
+  
+  /* Media Query for extra small screens */
+  @media (max-width: 480px) {
+    .logo {
+      width: 80%; /* Make logo bigger on smaller screens */
+    }
+  }
+
+
+
   .button-group {
     display: flex;
     justify-content: center;
@@ -57,7 +66,7 @@ ion-content {
     margin-top: -5px;
     margin-bottom: 70px;
   }
-  
+
   .button-group ion-button {
     --border-radius: 20px;
     --background: #2a6829;
@@ -65,179 +74,224 @@ ion-content {
     --background-activated: #1e4e1d;
     --border-color: #2a6829;
     width: 130px;
-  
+
   }
-  
+
   .button-group ion-button[fill="outline"] {
     --background: transparent;
     --color: #2a6829;
     --border-color: #2a6829;
     --border-width: 2px;
   }
-  
-ion-button.sign-up {
-  z-index: 1;
-  width: 120px;
-  margin-left: 100px;
-  position: absolute;
-  //text-align: right; 
-  --padding-start: 30px; 
-  //--padding-end: 20px; 
- 
-}
 
+  ion-button.sign-up {
+    z-index: 1;
+    width: 120px;
+    margin-left: 94px;
+    position: absolute;
+    //text-align: right; 
+    --padding-start: 30px;
+    //--padding-end: 20px; 
 
-ion-button.sign-in {
-  z-index: 2;
-  width: 120px;
-  margin-left: -100px;
-  position: absolute;
-  
-}
-
-.form-container {
-  margin-top: 50px;
-  z-index:1;
-}
-
-.form-field {
-  margin-bottom: 50px;
-  z-index:1;
-}
-
-/* Add the username-form margin here */
-.username-form {
-  margin-top: 50px; 
-  z-index:1;
-}
-
-ion-input {
-  --background: transparent; 
-  --border-color: #ccc;
-  --box-shadow: none; 
+  }
 
   
-}
-/* Remove background for ion-item containers */
-ion-item {
-  --background: transparent; 
-  --border-color: transparent; 
-  --padding-start: 0;
-  --padding-end: 0;
-  
-}
+  ion-button.sign-in {
+    z-index: 2;
+    width: 120px;
+    margin-left: -94px;
+    position: absolute;
 
-.signin1{
-  color: #000;;
-}
+  }
 
-.ion-margin-horizontal ion-button {
-  --background: #2a6829; /* Green background */
-  --color: white;       /* White y */
-  --background-activated: #1e4e1d; /* Darker green when pressed */
-  --border-radius: 20px; /* Rounded corners */
-  font-size: 16px;       /* Consistent text size */
-  letter-spacing: 0.5px; /* Slightly spaced text */
-}
+  .form-container {
+    margin-top: 50px;
+    z-index: 1;
+  }
 
-.ion-margin{
-  margin-top: 40px;
-}
+  .form-field {
+    margin-bottom: 50px;
+    z-index: 1;
+  }
 
-  ion-card{
-    height: 800px;
-      box-shadow: none;
-      position: absolute;
-      top: 21%;
-      left: 5%;
-      right: 5%;
-      border-radius: 20px;
-      --background: #e7e8e6;
-      max-height: 450px;
-      border: #000000;
-      border-width: 10px;
+  /* Add the username-form margin here */
+  .username-form {
+    margin-top: 50px;
+    z-index: 1;
+  }
 
-      h1{
-        font-weight: bold;
-        font-size: 19px;
-        text-align: center; 
-        margin-bottom: 5px;
-        color: #93A87D;
+  ion-input {
+    --background: transparent;
+    --border-color: #ccc;
+    --box-shadow: none;
 
-      }
-      p{
-        text-align: center;
-        font-size: 16px;
-        margin-bottom: 15px;
-        color: #93A87D;
-      }
-      ion-button{
-        height: 40px;
-        --box-shadow: none;
-        text-transform: initial;
-        font-size: 16px;
-        letter-spacing: 0;
-        font-weight: 400;
-        
-      }
-      .line-text{
-        padding: 2px;
+
+  }
+
+  /* Remove background for ion-item containers */
+  ion-item {
+    --background: transparent;
+    --border-color: transparent;
+    --padding-start: 0;
+    --padding-end: 0;
+
+  }
+
+  .signin1 {
+    color: #000;
+    ;
+  }
+
+  .ion-margin-horizontal ion-button {
+    --background: #2a6829;
+    /* Green background */
+    --color: white;
+    /* White y */
+    --background-activated: #1e4e1d;
+    /* Darker green when pressed */
+    --border-radius: 20px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Consistent text size */
+    letter-spacing: 0.5px;
+    /* Slightly spaced text */
+    /* Apply the wave animation */
+    animation: waveBackground 5s infinite;
+  }
+
+  /* Keyframes for background wave effect */
+  @keyframes waveBackground {
+    0% {
+      --background: #2a6829;
+      /* Dark green */
+    }
+
+    25% {
+      --background: #3d7f3a;
+      /* Lighter green */
+    }
+
+    50% {
+      --background: #5b9d5f;
+      /* Even lighter green */
+    }
+
+    75% {
+      --background: #2f772b;
+      /* Lighter green */
+    }
+
+    100% {
+      --background: #0e2f0e;
+      /* Back to dark green */
+    }
+  }
+
+  .ion-margin {
+    margin-top: 40px;
+  }
+
+  ion-card {
+    // height: 80%;
+    box-shadow: none;
+    border-radius: 20px;
+    --background: rgba(255, 255, 255, 0.75);
+    border: #000000;
+    border-width: 10px;
+
+    padding: h1 {
+      font-weight: bold;
+      font-size: 19px;
+      text-align: center;
+      margin-bottom: 5px;
+      color: #93A87D;
+
+    }
+
+    p {
+      text-align: center;
+      font-size: 16px;
+      margin-bottom: 15px;
+      color: #93A87D;
+    }
+
+    ion-button {
+      height: 40px;
+      --box-shadow: none;
+      text-transform: initial;
+      font-size: 16px;
+      letter-spacing: 0;
+      font-weight: 400;
+
+
+    }
+
+    .line-text {
+      padding: 2px;
+      margin-top: 0px;
+      position: relative;
+      height: 20px;
+
+      .lines {
         margin-top: 0px;
-        position: relative;
-        height: 20px;
+        height: 1px;
+        background: #858585;
+        display: block;
+      }
 
-        .lines{
-          margin-top: 0px;
-          height: 1px;
-          background: #858585;
-          display: block;
-        }
-        .text{
-          display: block;
-          text-align: center;
-          transform: translateY(-30%);
-          padding: 0 15px;
-          font-size: 12px;
-          font-weight: 500;
-          color: #93A87D;
-          margin-top: 25px;
-          
+      .text {
+        display: block;
+        text-align: center;
+        transform: translateY(-30%);
+        padding: 0 15px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #000000;
+        margin-top: 25px;
+
+      }
+    }
+
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      ion-buton {
+        margin: 0 5px;
+        --padding-start: 12px;
+        --padding-end: 12px;
+
+        ion-icon {
+          font-style: 18px;
         }
       }
-      .socials{
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;
-        margin-bottom: 10px;
 
-        ion-buton{
-          margin: 0 5px;
-          --padding-start: 12px;
-          --padding-end: 12px;
-
-          ion-icon{
-            font-style: 18px;
-          }
-        }
-        .btn-fb{
-          --background: #567aa3;
-        }
-        .btn-tw{
-          --background: #48cff8;
-        }
-        .btn-go{
-          --background: #fd684f;
-        }
-        .btn-ph{
-          --background: #737373;
-        }
+      .btn-fb {
+        --background: #567aa3;
       }
+
+      .btn-tw {
+        --background: #48cff8;
+      }
+
+      .btn-go {
+        --background: #fd684f;
+      }
+
+      .btn-ph {
+        --background: #737373;
+      }
+    }
   }
 }
 
 #example-modal {
-  --background: white; /* Set modal background color */
-  --border-radius: 10px; /* Apply border radius */
+  --background: white;
+  /* Set modal background color */
+  --border-radius: 10px;
+  /* Apply border radius */
   color: #1e3a1c;
 
 }
@@ -245,9 +299,11 @@ ion-item {
 .google-sign-in {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between the icon and text */
+  gap: 10px;
+  /* Space between the icon and text */
 }
-.span{
+
+.span {
   margin-left: 10px;
 }
 
@@ -260,13 +316,29 @@ form.marginme ion-text {
 }
 
 form.marginme .error {
- --color: red;
+  --color: red;
 }
+
 ion-card.ion-padding {
-  border: 1px solid rgb(0, 121, 8) !important;
+  border: 1px solid rgb(22, 57, 22) !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 15px rgba(0, 0, 0, 0.2) !important;
+
 }
 
 //modal fb
-.topmodalfb{
+.topmodalfb {
   display: inline-block;
+}
+
+ion-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* Dark overlay with 50% opacity */
+  z-index: -1;
+  /* Ensures the overlay is only on the background, not the content */
 }

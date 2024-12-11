@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SigninPage implements OnInit {
   signInForm: FormGroup; // Correct form name
   type = false; // Toggle password visibility
+  typeConfirmPassword = false;
   isSignUp = false; // Toggle between Sign In and Sign Up forms
 
   constructor(private formBuilder: FormBuilder) {
@@ -22,15 +23,27 @@ export class SigninPage implements OnInit {
 
   ngOnInit() {}
 
-  // Toggle password visibility
   changeType() {
     this.type = !this.type;
   }
 
+  // Toggle confirm password visibility
+  changeConfirmPasswordType() {
+    this.typeConfirmPassword = !this.typeConfirmPassword;
+  }
+
+
   // Switch between Sign In and Sign Up
   switchForm(signUp: boolean) {
     this.isSignUp = signUp;
-    this.signInForm.reset(); // Optional: Reset form fields when switching
+    this.signInForm.reset(); // Reset form fields when switching
+  
+    // Reset the password visibility for both fields when switching to sign-up
+    if (signUp) {
+      this.typeConfirmPassword = false;  // Make sure the confirm password eye starts hidden
+    } else {
+      this.typeConfirmPassword = false;  // Hide confirm password eye for sign-in
+    }
   }
 
   // Handle form submission
