@@ -1,6 +1,5 @@
 ion-content {
   --background: url(/assets/Images/green.jpg) center/cover no-repeat;
-  position: relative;
 
 
   /* Create a dark overlay */
@@ -198,6 +197,7 @@ ion-content {
     --background: rgba(255, 255, 255, 0.75);
     border: #000000;
     border-width: 10px;
+  
 
     padding: h1 {
       font-weight: bold;

@@ -6,9 +6,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductCardComponent } from './product-card/product-card.component'; // Adjust path as needed
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ProductCardComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
