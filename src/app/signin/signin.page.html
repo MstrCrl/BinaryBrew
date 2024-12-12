@@ -136,26 +136,29 @@
 </ion-content>
 
 
-<!-- fb sign in modal -->
+  <!-- fb sign in modal -->
 
-<ion-modal id="example-modal" #modal trigger="openfb">
-  <ng-template>
-    <div class="wrapper">
-      <div class="logo-container" style="border-bottom: 1px solid black;"><img src="./assets/Images/facebook.png" alt="" class="logo">
-        <h5>Sign in with Facebook</h5></div>
-      <div class="line"></div>
-      <div class="container1" style="margin-top: -15px;">
-        <img src="./assets/Images/logo.png" alt="" style="width: 150px; margin-left: -20px;">
-        <span><h1 style="font-weight: bolder; margin-left: -3px;">Sign In</h1><p style="margin-top: -10px;">to continue to <a href="#" style="text-decoration: none; color: green;">BinaryBrew</a> </p></span><br>
-        <input type="text" placeholder="Email or phone" class="input">
-        <div class="bef">Before using this app you can view BinaryBrew <a href="" style="text-decoration: none; color: green;">privacy policy</a> and <a href="" style="text-decoration: none; color: green;">terms of services.</a></div>
-        <div class="cre" style="font-weight: bold;">Create Account
-          <ion-button class="btn" id="openfbpass" >Next</ion-button>
+  <ion-modal id="example-modal" #modal trigger="openfb" class="fbmodal">
+    <ng-template>
+      <div class="wrapper">
+        <div class="logo-container" style="border-bottom: 1px solid black;"><img src="./assets/Images/facebook.png" alt="" class="logo">
+          <h5>Sign in with Facebook</h5></div>
+        <div class="line"></div>
+        <div class="container1" style="margin-top: -15px;">
+          <img src="./assets/Images/logo.png" alt="" style="width: 150px; margin-left: -20px;">
+          <span><h1 style="font-weight: bolder; margin-left: -3px;">Sign In</h1><p style="margin-top: -10px;">to continue to <a href="#" style="text-decoration: none; color: green;">BinaryBrew</a> </p></span><br>
+          <div class="inputs">
+            <input type="text" placeholder="Email or phone" class="input">
+            <input type="text" placeholder="Enter password" id="passsword" class="input" >
+          </div>
+          <div class="bef">Before using this app you can view BinaryBrew <a href="" style="text-decoration: none; color: green;">privacy policy</a> and <a href="" style="text-decoration: none; color: green;">terms of services.</a></div>
+          <div class="cre" style="font-weight: bold;">Create Account
+            <ion-button class="btn" id="open-passfb" routerLink="/home">Next</ion-button>
+          </div>
         </div>
       </div>
-    </div>
-  </ng-template>
-</ion-modal>
+    </ng-template>
+  </ion-modal>
 
 
 <!-- twitter sign in modal -->
@@ -163,16 +166,19 @@
 <ion-modal id="example-modal" #modal trigger="opentw">
   <ng-template>
     <div class="wrapper">
-            <div class="logo-container" style="border-bottom: 1px solid black;"><img src="./assets/Images/twitter.png" alt="" class="logo">
+      <div class="logo-container" style="border-bottom: 1px solid black;"><img src="./assets/Images/twitter.png" alt="" class="logo">
         <h5>Sign in with Twitter</h5></div>
       <div class="line"></div>
       <div class="container1" style="margin-top: -15px;">
         <img src="./assets/Images/logo.png" alt="" style="width: 150px; margin-left: -20px;">
         <span><h1 style="font-weight: bolder; margin-left: -3px;">Sign In</h1><p style="margin-top: -10px;">to continue to <a href="#" style="text-decoration: none; color: green;">BinaryBrew</a> </p></span><br>
-        <input type="text" placeholder="Email or phone" class="input">
+        <div class="inputs">
+            <input type="text" placeholder="Email or phone" class="input">
+            <input type="text" placeholder="Enter password" id="passsword" class="input" >
+          </div>
         <div class="bef">Before using this app you can view BinaryBrew <a href="" style="text-decoration: none; color: green;">privacy policy</a> and <a href="" style="text-decoration: none; color: green;">terms of services.</a></div>
         <div class="cre">Create Account
-          <ion-button class="btn">Next</ion-button>
+          <ion-button class="btn" routerLink="/home">Next</ion-button>
         </div>
       </div>
     </div>
@@ -189,10 +195,13 @@
       <div class="container1">
         <img src="./assets/Images/logo.png" alt="" style="width: 150px; margin-left: -20px;">
         <span><h1 style="font-weight: bolder; margin-left: -3px;">Sign In</h1><p style="margin-top: -10px;">to continue to <a href="#" style="text-decoration: none; color: green;">BinaryBrew</a> </p></span><br>
-        <input type="text" placeholder="Email or phone" class="input">
+        <div class="inputs">
+            <input type="text" placeholder="Email or phone" class="input">
+            <input type="text" placeholder="Enter password" id="passsword" class="input" >
+          </div>
         <div class="bef">Before using this app you can view BinaryBrew <a href="" style="text-decoration: none; color: green;">privacy policy</a> and <a href="" style="text-decoration: none; color: green;">terms of services.</a></div>
         <div class="cre">Create Account
-          <ion-button class="btn">Next</ion-button>
+          <ion-button class="btn" routerLink="/home">Next</ion-button>
         </div>
       </div>
     </div>
@@ -210,10 +219,13 @@
       <div class="container1">
         <img src="./assets/Images/logo.png" alt="" style="width: 150px; margin-left: -20px;">
         <span><h1 style="font-weight: bolder; margin-left: -3px;">Sign In</h1><p style="margin-top: -10px;">to continue to <a href="#" style="text-decoration: none; color: green;">BinaryBrew</a> </p></span><br>
-        <input type="text" placeholder="Email or phone" class="input">
+        <div class="inputs">
+            <input type="text" placeholder="Email or phone" class="input">
+            <input type="text" placeholder="Enter password" id="passsword" class="input" >
+          </div>
         <div class="bef">Before using this app you can view BinaryBrew <a href="" style="text-decoration: none; color: green;">privacy policy</a> and <a href="" style="text-decoration: none; color: green;">terms of services.</a></div>
         <div class="cre">Create Account
-          <ion-button class="btn" id="openphpass">Next</ion-button>
+          <ion-button class="btn" id="openphpass" routerLink="/home" >Next</ion-button>
         </div>
         </div>
       </div>

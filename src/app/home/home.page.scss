@@ -370,6 +370,17 @@ ion-tab-bar {
     padding: 0 10px;
     margin: 0;
     overflow: visible;
+    .searchicon {
+        border-top-right-radius: 20px; // Rounded corner on the right
+        margin-right: 40px;
+        z-index: 100;
+      }
+  
+      .histicon {
+        border-top-left-radius: 20px; // Rounded corner on the left
+        margin-left: 28px;
+        z-index: 100;
+      }
 
     /* Adjust padding and spacing for larger screens */
     @media (min-width: 768px) and (max-width: 1024px) {
@@ -413,6 +424,7 @@ ion-fab {
     position: absolute;
     bottom: 15px;
     z-index: 10;
+    
 
     @media (min-width: 768px) and (max-width: 1024px) {
         /* Tablet screens */
@@ -427,43 +439,65 @@ ion-fab {
 }
 
 ion-fab-button {
-    --background: #224a1f;
-    /* Green background for the button */
+    --background: #224a1f; // Matches tab bar color
     --color: white;
-    /* White icon color */
-    border-radius: 50%;
-    /* Ensures the button is circular */
-    border: 4px solid white;
-    /* Black border */
+    border-radius: 50%; // Circular shape
+    border: 13px solid rgb(255, 255, 255);
     box-sizing: border-box;
-    /* Ensures padding and borders are included in size */
-    height: 60px;
-    /* Default button size for small screens */
-    width: 60px;
-    /* Set width explicitly to match height for a perfect circle */
+    height: 80px;
+    width: 80px;
     padding: 0;
-    overflow: visible;
-    /* Ensure the border isn't hidden */
-    z-index: 11;
+    z-index: -1;
+    
     /* Ensure it's above other elements */
 
     /* Adjust button size for larger screens */
     @media (min-width: 768px) and (max-width: 1024px) {
         /* Tablet screens */
-        height: 75px;
-        width: 75px;
+        height: 90px;
+        width: 90px;
         border: 5px solid white;
         /* Slightly thicker border */
     }
 
     @media (min-width: 1025px) {
         /* Larger than tablets */
-        height: 85px;
-        width: 85px;
-        border: 6px solid black;
+        height: 105px;
+        width: 105px;
+        border: 6px solid white;
         /* Thicker border for proportion */
     }
 }
+
+
+ ion-fab::before{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background:#224a1f;
+      margin-left: -15px;
+      margin-top: 45px;
+      border-top-right-radius: 20px;
+      box-shadow: 1px -12px 0 0 white;
+      z-index: -1;
+  
+    }
+
+    ion-fab::after{
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background:#224a1f;
+      margin-left: 75px;
+      margin-top: -35px;
+     
+      border-top-left-radius: 20px;
+      box-shadow: -1px -12px 0 0 white;
+      z-index: -1;
+  
+    }
 
 
 // product
