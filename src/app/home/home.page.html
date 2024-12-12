@@ -23,11 +23,43 @@
         </div>
         <div class="curve"></div>
         <div class="curve"></div>
-        
     </ion-header>
-
+    <div class="product-scroll-container">
     <!-- start ng product -->
+            <div style="padding-left: 10px;"></div>
+            
+            <app-product-card
+            [productName]="'Caramel'"
+            [productPrice]="'P119.00'"
+            [productImage]="'assets/Images/latte/caramel-macchiato-latte.png'"
+            [rating]="9.2"
+            [isFavorite]="true">
+            </app-product-card>
 
+            <app-product-card
+            [productName]="'Spanish Latte'"
+            [productPrice]="'P119.99'"
+            [productImage]="'assets/Images/latte/spanish-latte.png'"
+            [rating]="9.1"
+            [isFavorite]="true">
+            </app-product-card>
+
+            <app-product-card 
+            [productName]="'C and C'"
+            [productPrice]="'119.00'"
+            [productImage]="'assets/Images/latte/mocha-latte.png'"
+            [rating]="9.0"
+            [isFavorite]="true">
+            </app-product-card>
+
+            <app-product-card
+            [productName]="'Vanilla Latte'"
+            [productPrice]="'119.00'"
+            [productImage]="'assets/Images/latte/spanish-latte.png'"
+            [rating]="9.0"
+            [isFavorite]="true">
+            </app-product-card>
+    </div>    
 
 
 

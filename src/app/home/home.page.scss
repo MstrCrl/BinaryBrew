@@ -1,153 +1,185 @@
 ion-content {
-    --background: white; /* Sets the screen's background to white */
-    position: relative; /* Ensures proper stacking of elements */
+    --background: white;
+    /* Sets the screen's background to white */
+    position: relative;
+    /* Ensures proper stacking of elements */
 }
 
 ion-header {
-    background-color: #224a1f; /* Green header background */
+    background-color: #224a1f;
+    /* Green header background */
     padding: 20px;
-    text-align: left; /* Align content to the left */
+    text-align: left;
+    /* Align content to the left */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    
+
     .header-container {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
-    
+
     .search-container {
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-bottom: 10px;
-      /* Make the input take available space with max-width for responsiveness */
-      max-width: 100%; /* Allow input to scale up */
-      flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
-    
-      ion-input {
-        flex: 1;
-        border: none;
-        --placeholder-color: #4d4848;
-        --background: transparent;
-        --padding-start: 10px;
-        --padding-end: 10px;
-        --background: white;
-        --border-radius: 25px;
-        padding: 5px 10px;
-        --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        max-width: 100%; /* Ensure input box scales */
-      }
-    
-      .search-button,
-      .cart-button {
-        --background: #224a1f;
-        --color: white;
-        border-radius: 25px;
-        margin-left: 10px;
-        height: 40px; /* Adjust button size */
-        width: auto; /* Allow buttons to adjust their width based on content */
-      }
-    
-      .cart-button {
-        --color: #ffffff;
-      }
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 10px;
+        /* Make the input take available space with max-width for responsiveness */
+        max-width: 100%;
+        /* Allow input to scale up */
+        flex-wrap: wrap;
+        /* Ensure elements wrap on smaller screens */
+
+        ion-input {
+            flex: 1;
+            border: none;
+            --placeholder-color: #4d4848;
+            --background: transparent;
+            --padding-start: 10px;
+            --padding-end: 10px;
+            --background: white;
+            --border-radius: 25px;
+            padding: 5px 10px;
+            --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            /* Ensure input box scales */
+        }
+
+        .search-button,
+        .cart-button {
+            --background: #224a1f;
+            --color: white;   
+            height: 40px;
+            /* Adjust button size */
+            
+            /* Allow buttons to adjust their width based on content */
+        }
+
+        .cart-button {
+            --color: #ffffff;
+            font-size: 20px;
+            margin-left: -20px;
+        }
+        .search-button{
+            font-size: 20px;
+        }
     }
-    
+
     /* Coffee Title */
-.coffee-title {
-    font-size: 1.5rem; /* Default for smaller screens */
-    color: white;
-    margin: 0;
-    font-weight: bold;
-    width: 100%;
-  }
-  
-  /* Most Popular Text */
-  .most-popular {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    color: white;
-    width: 100%;
-    
-    .hot-icon {
-      font-size: 1.5rem; /* Default hot icon size */
-      color: red; /* Make the hot icon red */
-    }
-  
-    span {
-      font-size: 1rem; /* Default text size */
-    }
-  }
-  }
-  
-  /* Media Queries for Responsiveness */
-  @media (min-width: 768px) { /* Tablet/Small screen (iPad, tablets) */
-    ion-header {
-      padding: 30px;
-    }
-  
-    .search-container {
-      max-width: 600px; /* Increase search container width */
-      margin-bottom: 15px;
-    }
-  
     .coffee-title {
-        font-size: 2rem; /* Increase title size */
-      }
-    
-      .most-popular {
-        gap: 10px; /* More space between the icon and text */
+        font-size: 1.5rem;
+        /* Default for smaller screens */
+        color: white;
+        margin: 0;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    /* Most Popular Text */
+    .most-popular {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: white;
+        width: 100%;
+
         .hot-icon {
-          font-size: 2rem; /* Increase hot icon size */
+            font-size: 1.5rem;
+            /* Default hot icon size */
+            color: red;
+            /* Make the hot icon red */
         }
-    
+
         span {
-          font-size: 1.2rem; /* Increase font size of the subtitle */
+            font-size: 1rem;
+            /* Default text size */
         }
-      }
-  }
-  
-  @media (min-width: 1024px) { /* Larger tablets (iPad Pro, bigger screens) */
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+
+    /* Tablet/Small screen (iPad, tablets) */
     ion-header {
-      padding: 40px;
+        padding: 30px;
     }
-  
+
     .search-container {
-      max-width: 700px; /* Increase search container width */
-      margin-bottom: 20px;
+        max-width: 600px;
+        /* Increase search container width */
+        margin-bottom: 15px;
     }
-  
+
     .coffee-title {
-        font-size: 2.5rem; /* Increase title size */
-      }
-    
-      .most-popular {
-        gap: 15px; /* More space between the icon and text */
+        font-size: 2rem;
+        /* Increase title size */
+    }
+
+    .most-popular {
+        gap: 10px;
+
+        /* More space between the icon and text */
         .hot-icon {
-          font-size: 2.5rem; /* Increase hot icon size */
+            font-size: 2rem;
+            /* Increase hot icon size */
         }
-    
+
         span {
-          font-size: 1.5rem; /* Increase font size of the subtitle */
+            font-size: 1.2rem;
+            /* Increase font size of the subtitle */
         }
-      }
-  }
-  
-  /* Curve Styling (Optional) */
-  .curve {
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Larger tablets (iPad Pro, bigger screens) */
+    ion-header {
+        padding: 40px;
+    }
+
+    .search-container {
+        max-width: 700px;
+        /* Increase search container width */
+        margin-bottom: 20px;
+    }
+
+    .coffee-title {
+        font-size: 2.5rem;
+        /* Increase title size */
+    }
+
+    .most-popular {
+        gap: 15px;
+
+        /* More space between the icon and text */
+        .hot-icon {
+            font-size: 2.5rem;
+            /* Increase hot icon size */
+        }
+
+        span {
+            font-size: 1.5rem;
+            /* Increase font size of the subtitle */
+        }
+    }
+}
+
+/* Curve Styling (Optional) */
+.curve {
     position: absolute;
     height: 250px;
     width: 100%;
     bottom: 0;
     z-index: -1;
-  }
-  
-  .curve::before {
+}
+
+.curve::before {
     content: "";
     display: block;
     position: absolute;
@@ -157,9 +189,9 @@ ion-header {
     background-color: #224a1f;
     transform: translate(81%, 43%);
     z-index: -1;
-  }
-  
-  .curve::after {
+}
+
+.curve::after {
     content: "";
     display: block;
     position: absolute;
@@ -169,65 +201,81 @@ ion-header {
     background-color: #224a1f;
     transform: translate(-11%, 40%);
     z-index: -1;
-  }
-  
-  
-  
-  /* Media Queries for Responsiveness */
-  @media (min-width: 768px) { /* Tablet/Small screen (iPad, tablets) */
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+
+    /* Tablet/Small screen (iPad, tablets) */
     ion-header {
-      padding: 30px;
+        padding: 30px;
     }
-  
+
     .search-container {
-      max-width: 600px; /* Increase search container width */
-      margin-bottom: 15px;
+        max-width: 600px;
+        /* Increase search container width */
+        margin-bottom: 15px;
     }
-  
+
     .coffee-title {
-      font-size: 2rem; /* Increase title size */
+        font-size: 2rem;
+        /* Increase title size */
     }
-  
+
     .most-popular {
-      gap: 10px; /* More space between the icon and text */
-      .hot-icon {
-        font-size: 2rem; /* Increase hot icon size */
-      }
-  
-      span {
-        font-size: 1.2rem; /* Increase font size of the subtitle */
-      }
+        gap: 10px;
+
+        /* More space between the icon and text */
+        .hot-icon {
+            font-size: 2rem;
+            /* Increase hot icon size */
+        }
+
+        span {
+            font-size: 1.2rem;
+            /* Increase font size of the subtitle */
+        }
     }
-  }
-  
-  @media (min-width: 1024px) { /* Larger tablets (iPad Pro, bigger screens) */
+}
+
+@media (min-width: 1024px) {
+
+    /* Larger tablets (iPad Pro, bigger screens) */
     ion-header {
-      padding: 40px;
+        padding: 40px;
     }
-  
+
     .search-container {
-      max-width: 700px; /* Increase search container width */
-      margin-bottom: 20px;
+        max-width: 700px;
+        /* Increase search container width */
+        margin-bottom: 20px;
     }
-  
+
     .coffee-title {
-      font-size: 2.5rem; /* Increase title size */
+        font-size: 2.5rem;
+        /* Increase title size */
     }
-  
+
     .most-popular {
-      gap: 15px; /* More space between the icon and text */
-      .hot-icon {
-        font-size: 2.5rem; /* Increase hot icon size */
-      }
-  
-      span {
-        font-size: 1.5rem; /* Increase font size of the subtitle */
-      }
+        gap: 15px;
+
+        /* More space between the icon and text */
+        .hot-icon {
+            font-size: 2.5rem;
+            /* Increase hot icon size */
+        }
+
+        span {
+            font-size: 1.5rem;
+            /* Increase font size of the subtitle */
+        }
     }
-  }
-  
-  /* Add any additional adjustments for larger screens if needed */
-  
+}
+
+/* Add any additional adjustments for larger screens if needed */
+
 /* Curve Styling */
 .curve {
     position: absolute;
@@ -235,9 +283,9 @@ ion-header {
     width: 100%;
     bottom: 0;
     z-index: -1;
-  }
-  
-  .curve::before {
+}
+
+.curve::before {
     content: "";
     display: block;
     position: absolute;
@@ -248,9 +296,9 @@ ion-header {
     background-color: #224a1f;
     transform: translate(53%, 43%);
     z-index: -1;
-  }
-  
-  .curve::after {
+}
+
+.curve::after {
     content: "";
     display: block;
     position: absolute;
@@ -260,43 +308,49 @@ ion-header {
     background-color: #224a1f;
     transform: translate(-16%, 40%);
     z-index: -1;
-  }
-  
-  /* Media Query for Curve Responsiveness */
-  @media (min-width: 768px) { /* Tablet and up */
+}
+
+/* Media Query for Curve Responsiveness */
+@media (min-width: 768px) {
+
+    /* Tablet and up */
     .curve {
-      height: 300px; /* Adjust curve height for bigger screens */
-      width: 100%;
+        height: 300px;
+        /* Adjust curve height for bigger screens */
+        width: 100%;
     }
-  
+
     .curve::before {
-      width: 70%;
+        width: 70%;
     }
-  
+
     .curve::after {
-      width: 70%;
+        width: 70%;
     }
-  }
-  
-  @media (min-width: 1024px) { /* Larger screens */
+}
+
+@media (min-width: 1024px) {
+
+    /* Larger screens */
     .curve {
-      height: 350px; /* Further increase curve height for larger screens */
-      border-radius: 214% 146%;
-      width: 60%;
-      height: 100%;
-      background-color: #224a1f;
-      transform: translate(-16%, 40%);
-      z-index: -1;
+        height: 350px;
+        /* Further increase curve height for larger screens */
+        border-radius: 214% 146%;
+        width: 60%;
+        height: 100%;
+        background-color: #224a1f;
+        transform: translate(-16%, 40%);
+        z-index: -1;
     }
-  
+
     .curve::before {
-      width: 70%;
+        width: 70%;
     }
-  
+
     .curve::after {
-      width: 70%;
+        width: 70%;
     }
-  }
+}
 
 
 
@@ -305,7 +359,7 @@ ion-tab-bar {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: #224a1f; 
+    background: #224a1f;
     --color-selected: white;
     left: 0;
     right: 0;
@@ -315,76 +369,125 @@ ion-tab-bar {
     padding: 0 10px;
     margin: 0;
     overflow: visible;
-  
+
     /* Adjust padding and spacing for larger screens */
-    @media (min-width: 768px) and (max-width: 1024px) { /* Tablet screens */
-      padding: 0 20px;
-      height: 80px; /* Increase height for larger screens */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        /* Tablet screens */
+        padding: 0 20px;
+        height: 80px;
+        /* Increase height for larger screens */
     }
-    
-    @media (min-width: 1025px) { /* Larger than tablets */
-      padding: 0 30px;
-      height: 90px;
+
+    @media (min-width: 1025px) {
+        /* Larger than tablets */
+        padding: 0 30px;
+        height: 90px;
     }
-  }
-  
-  ion-tab-button {
+}
+
+ion-tab-button {
     --background: transparent;
     --color: white;
     --color-selected: white;
-  
+
     ion-icon {
-      font-size: 1.8rem; /* Default size for phones */
-  
-      /* Adjust icon size for larger screens */
-      @media (min-width: 768px) and (max-width: 1024px) { /* Tablet screens */
-        font-size: 2.3rem;
-      }
-  
-      @media (min-width: 1025px) { /* Larger than tablets */
-        font-size: 2.6rem;
-      }
+        font-size: 1.8rem;
+        /* Default size for phones */
+
+        /* Adjust icon size for larger screens */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            /* Tablet screens */
+            font-size: 2.3rem;
+        }
+
+        @media (min-width: 1025px) {
+            /* Larger than tablets */
+            font-size: 2.6rem;
+        }
     }
-  }
-  
-  /* Floating Home Icon */
-  ion-fab {
+}
+
+/* Floating Home Icon */
+ion-fab {
     position: absolute;
     bottom: 15px;
     z-index: 10;
-  
-    @media (min-width: 768px) and (max-width: 1024px) { /* Tablet screens */
-      bottom: 20px; /* Slightly higher floating position */
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        /* Tablet screens */
+        bottom: 20px;
+        /* Slightly higher floating position */
     }
-  
-    @media (min-width: 1025px) { /* Larger than tablets */
-      bottom: 25px;
+
+    @media (min-width: 1025px) {
+        /* Larger than tablets */
+        bottom: 25px;
     }
-  }
-  
-  ion-fab-button {
-    --background: #224a1f; /* Green background for the button */
-    --color: white; /* White icon color */
-    border-radius: 50%; /* Ensures the button is circular */
-    border: 4px solid white; /* Black border */
-    box-sizing: border-box; /* Ensures padding and borders are included in size */
-    height: 60px; /* Default button size for small screens */
-    width: 60px; /* Set width explicitly to match height for a perfect circle */
+}
+
+ion-fab-button {
+    --background: #224a1f;
+    /* Green background for the button */
+    --color: white;
+    /* White icon color */
+    border-radius: 50%;
+    /* Ensures the button is circular */
+    border: 4px solid white;
+    /* Black border */
+    box-sizing: border-box;
+    /* Ensures padding and borders are included in size */
+    height: 60px;
+    /* Default button size for small screens */
+    width: 60px;
+    /* Set width explicitly to match height for a perfect circle */
     padding: 0;
-    overflow: visible; /* Ensure the border isn't hidden */
-    z-index: 11; /* Ensure it's above other elements */
-  
+    overflow: visible;
+    /* Ensure the border isn't hidden */
+    z-index: 11;
+    /* Ensure it's above other elements */
+
     /* Adjust button size for larger screens */
-    @media (min-width: 768px) and (max-width: 1024px) { /* Tablet screens */
-      height: 75px;
-      width: 75px;
-      border: 5px solid white; /* Slightly thicker border */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        /* Tablet screens */
+        height: 75px;
+        width: 75px;
+        border: 5px solid white;
+        /* Slightly thicker border */
     }
-  
-    @media (min-width: 1025px) { /* Larger than tablets */
-      height: 85px;
-      width: 85px;
-      border: 6px solid black; /* Thicker border for proportion */
+
+    @media (min-width: 1025px) {
+        /* Larger than tablets */
+        height: 85px;
+        width: 85px;
+        border: 6px solid black;
+        /* Thicker border for proportion */
     }
+}
+
+
+// product
+/* Product Scroll Container */
+
+
+
+.product-scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    // padding: 10px 0;  /* Adds space around the content (top and bottom) */
+    white-space: nowrap; /* Prevents items from wrapping to the next line */
+    height: 230px; /* Set the desired height for the container */
+    align-items: flex-end; /* Aligns the product cards to the bottom */
+    z-index: 100;
   }
   
+  app-product-card {
+    flex: 0 0 auto; /* Prevents flex items from growing or shrinking */
+    margin-right: 10px; /* Optional: Adds space between product cards */
+    width: 180px; /* Optional: Adjust width of each card */
+    z-index: 100;
+  }
+  
+  .product-scroll-container img {
+    max-width: 100%; /* Ensures images do not exceed their container's width */
+    height: auto; /* Maintains aspect ratio */
+  }
