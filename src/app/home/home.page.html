@@ -1,0 +1,59 @@
+<ion-content>
+    <ion-header>
+        <div class="header-container">
+            <!-- Search Bar and Cart Button in the same line -->
+            <div class="search-container">
+                <ion-input placeholder="Search..." type="text"></ion-input>
+                <ion-button fill="solid" size="small" class="search-button">
+                    <ion-icon name="search-outline"></ion-icon>
+                </ion-button>
+                <ion-button fill="clear" size="small" class="cart-button">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </ion-button>
+            </div>
+
+            <!-- Title, Left-Aligned -->
+            <h1 class="coffee-title">The Best Coffee in Town</h1>
+
+            <!-- Subtitle with Hot Icon, Left-Aligned -->
+            <div class="most-popular">
+                <ion-icon name="flame-outline" class="hot-icon" style="color: red;"></ion-icon>
+                <span>Most Popular</span>
+            </div>
+        </div>
+        <div class="curve"></div>
+        <div class="curve"></div>
+        
+    </ion-header>
+
+    <!-- start ng product -->
+
+
+
+
+
+
+    <ion-tabs #tabs [(ngModel)]="selectTab">
+        <ion-tab-bar slot="bottom">
+            <ion-tab-button tab="menu">
+                <ion-icon name="restaurant-outline"></ion-icon>
+            </ion-tab-button>
+            <ion-tab-button tab="search" class="searchicon">
+                <ion-icon name="search-outline"></ion-icon>
+            </ion-tab-button>
+            <ion-tab-button tab="order-history" class="histicon">
+                <ion-icon name="time-outline"></ion-icon>
+            </ion-tab-button>
+            <ion-tab-button tab="profile">
+                <ion-icon name="person-outline"></ion-icon>
+            </ion-tab-button>
+        </ion-tab-bar>
+
+        <!-- Floating Button in the center -->
+        <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+            <ion-fab-button routerLink="/home">
+                <ion-icon name="home-outline"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+    </ion-tabs>
+</ion-content>

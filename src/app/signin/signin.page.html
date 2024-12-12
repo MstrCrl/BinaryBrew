@@ -20,9 +20,9 @@
       <!-- Form -->
       <form [formGroup]="signInForm" class="marginme">
         <!-- Sign In Form -->
-        <div *ngIf="!isSignUp" class="signin1">
+        <div *ngIf="!isSignUp" class="signin1" >
           <div class="email-form">
-            <ion-item lines="full">
+            <ion-item lines="full"  style="color: black;">
               <ion-input formControlName="email" type="text" placeholder="Username"></ion-input>
             </ion-item>
             <ion-text color="danger" *ngIf="!signInForm.get('email')?.valid && signInForm.get('email')?.touched">
@@ -33,7 +33,7 @@
           </div>
 
           <div class="password-form">
-            <ion-item lines="full">
+            <ion-item lines="full"  style="color: black;">
               <ion-icon [name]="type ? 'eye' : 'eye-off'" slot="end" color="medium" (click)="changeType()">
               </ion-icon>
               <ion-input formControlName="password" [type]="type ? 'password' : 'text'"
@@ -54,13 +54,13 @@
         <!-- Sign Up Form -->
         <div *ngIf="isSignUp" class="">
           <div class="username-form">
-            <ion-item lines="full">
+            <ion-item lines="full" style="color: black;">
               <ion-input formControlName="username" type="text" placeholder="Username"></ion-input>
             </ion-item>
           </div>
 
           <div class="password-form">
-            <ion-item lines="full">
+            <ion-item lines="full"  style="color: black;">
               <ion-icon [name]="type ? 'eye' : 'eye-off'" slot="end" color="medium" (click)="changeType()"></ion-icon>
               <ion-input formControlName="Password" [type]="type ? 'password' : 'text'"
                 placeholder="Password"></ion-input>
@@ -77,7 +77,7 @@
           </div>
 
           <div class="password-form">
-            <ion-item lines="full">
+            <ion-item lines="full"  style="color: black;">
               <ion-icon [name]="typeConfirmPassword ? 'eye' : 'eye-off'" slot="end" color="medium"
                 (click)="changeConfirmPasswordType()"></ion-icon>
               <ion-input formControlName="confirmPassword" [type]="typeConfirmPassword ? 'password' : 'text'"
@@ -105,7 +105,7 @@
 
       <div class="ion-margin-horizontal">
         <ion-button class="ion-margin-horizontal" size="large" expand="block" shape="round" color="primary"
-          (click)="onSubmit()" routerLink="/landingpage">
+          (click)="onSubmit()" routerLink="/home">
           <ion-text>{{ isSignUp ? 'Sign Up' : 'Log In' }}</ion-text>
         </ion-button>
       </div>
