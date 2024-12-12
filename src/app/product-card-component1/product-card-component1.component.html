@@ -1,0 +1,22 @@
+<div class="product-container-wrapper">
+  <div class="product-container">
+    <div class="image-wrapper">
+      <img [src]="productImage1" alt="Product Image" class="product-image" />
+    </div>
+    <div class="product-details">
+      <div class="rating">
+        <span class="rating-value">{{ rating1 }}</span>
+        <ion-icon name="star"></ion-icon>
+      </div>
+      <div class="product-info">
+        <p class="product-name">{{ productName1 }}</p>
+        <p class="product-price">{{ productPrice1 }}</p>
+      </div>
+      <div class="favorites">
+        <ion-button fill="clear" class="heart-button" (click)="toggleFavorite()">
+          <ion-icon [name]="isFavorite1 ? 'heart' : 'heart-outline'"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -24,12 +24,15 @@
         <div class="curve"></div>
         <div class="curve"></div>
     </ion-header>
+
+
     <div class="product-scroll-container">
     <!-- start ng product -->
+
             <div style="padding-left: 10px;"></div>
             
             <app-product-card
-            [productName]="'Caramel'"
+            [productName]="'Macchiato'"
             [productPrice]="'P119.00'"
             [productImage]="'assets/Images/latte/caramel-macchiato-latte.png'"
             [rating]="9.2"
@@ -45,22 +48,58 @@
             </app-product-card>
 
             <app-product-card 
-            [productName]="'C and C'"
+            [productName]="'Mocha Latte'"
             [productPrice]="'119.00'"
             [productImage]="'assets/Images/latte/mocha-latte.png'"
-            [rating]="9.0"
+            [rating]="8.9"
             [isFavorite]="true">
             </app-product-card>
 
             <app-product-card
-            [productName]="'Vanilla Latte'"
+            [productName]="'Chocolate Latte'"
             [productPrice]="'119.00'"
-            [productImage]="'assets/Images/latte/spanish-latte.png'"
-            [rating]="9.0"
+            [productImage]="'assets/Images/latte/australian-chocolate-latte.png'"
+            [rating]="8.7"
             [isFavorite]="true">
             </app-product-card>
-    </div>    
+    </div> 
+       
+    <div class="product-scroll-container1">
+    <!-- start ng product -->
+        <div style="padding-left: 10px;"></div>
+    
+        <app-product-card-component1
+        [productName1]="'Hazelnut'"
+        [productPrice1]="'69.00'"
+        [productImage1]="'assets/Images/pastry/hazelnut-croissant.png'"
+        [rating1]="9.1"
+        [isFavorite1]="true">
+        </app-product-card-component1>
 
+        <app-product-card-component1
+        [productName1]="'ChocoDonut'"
+        [productPrice1]="'69.00'"
+        [productImage1]="'assets/Images/pastry/chococolate-donut.png'"
+        [rating1]="9.1"
+        [isFavorite1]="true">
+        </app-product-card-component1>
+
+        <app-product-card-component1
+        [productName1]="'Cheese Croissant'"
+        [productPrice1]="'79.00'"
+        [productImage1]="'assets/Images/pastry/cheese-croissant.png'"
+        [rating1]="8.9"
+        [isFavorite1]="true">
+        </app-product-card-component1>
+
+        <app-product-card-component1
+        [productName1]="'Macchiato'"
+        [productPrice1]="'79.00'"
+        [productImage1]="'assets/Images/pastry/mushroom-chicken.png'"
+        [rating1]="8.7"
+        [isFavorite1]="true">
+        </app-product-card-component1>
+    </div>
 
 
 

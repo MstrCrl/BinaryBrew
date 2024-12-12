@@ -55,7 +55,6 @@ ion-header {
             --color: white;   
             height: 40px;
             /* Adjust button size */
-            
             /* Allow buttons to adjust their width based on content */
         }
 
@@ -66,6 +65,8 @@ ion-header {
         }
         .search-button{
             font-size: 20px;
+            --box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+            
         }
     }
 
@@ -481,6 +482,30 @@ ion-fab-button {
   }
   
   app-product-card {
+    flex: 0 0 auto; /* Prevents flex items from growing or shrinking */
+    margin-right: 10px; /* Optional: Adds space between product cards */
+    width: 180px; /* Optional: Adjust width of each card */
+    z-index: 100;
+  }
+  
+  .product-scroll-container img {
+    max-width: 100%; /* Ensures images do not exceed their container's width */
+    height: auto; /* Maintains aspect ratio */
+  }
+
+
+  
+.product-scroll-container1 {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    // padding: 10px 0;  /* Adds space around the content (top and bottom) */
+    white-space: nowrap; /* Prevents items from wrapping to the next line */
+    height: 180px; /* Set the desired height for the container */
+    align-items: flex-end; /* Aligns the product cards to the bottom */
+    z-index: 100;
+  }
+  
+  app-product-card-component1 {
     flex: 0 0 auto; /* Prevents flex items from growing or shrinking */
     margin-right: 10px; /* Optional: Adds space between product cards */
     width: 180px; /* Optional: Adjust width of each card */

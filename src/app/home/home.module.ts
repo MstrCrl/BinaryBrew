@@ -9,6 +9,8 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { ProductCardComponent } from '../product-card/product-card.component';  // Import the ProductCardComponent
 
+import { ProductCardComponent1Component } from '../product-card-component1/product-card-component1.component';
+
 
 @NgModule({
   imports: [
@@ -17,7 +19,7 @@ import { ProductCardComponent } from '../product-card/product-card.component';  
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage, ProductCardComponent],
+  declarations: [HomePage, ProductCardComponent, ProductCardComponent1Component],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {}
