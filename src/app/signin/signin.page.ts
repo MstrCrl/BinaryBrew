@@ -12,7 +12,7 @@ export class SigninPage implements OnInit {
 
   
   signInForm: FormGroup; // Correct form name
-  type = false; // Toggle password visibility
+  type = true; // Toggle password visibility
   typeConfirmPassword = false;
   isSignUp = false; // Toggle between Sign In and Sign Up forms
 
@@ -23,7 +23,7 @@ export class SigninPage implements OnInit {
       username: [''], // For Sign Up
       confirmPassword: [''], // For Sign Up
     });
-  }
+  } 
 
   ngOnInit() {}
 
