@@ -1,0 +1,196 @@
+// coffee-products.page.scss
+ion-content {
+    --background: #ffffff;
+    
+    &::part(scroll) {
+      overflow: hidden;
+    }
+  }
+  
+  .container {
+    display: flex;
+    gap: 24px;
+    height: 100%;
+    max-height: 100vh;
+    background: #ffffff;
+    overflow: hidden;
+  }
+  
+  .product-list {
+    width: 280px;
+    padding: 16px;
+    background: #f8f9fa;
+    height: 100%;
+    overflow-y: auto;
+  
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #ddd;
+      border-radius: 4px;
+    }
+  }
+  
+  .product-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+  
+    &.selected {
+      background: #f0f0f0;
+      border: 2px solid #e0e0e0;
+    }
+  }
+  
+  .product-thumbnail {
+    width: 80px;
+    min-width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+  
+    ion-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .product-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .product-detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    overflow-y: auto;
+  
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #ddd;
+      border-radius: 4px;
+    }
+  }
+  
+  .featured-image-container {
+    height: 300px;
+    border-radius: 16px;
+    overflow: hidden;
+    
+    ion-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .details-container {
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 8px 0;
+  }
+  
+  .description {
+    color: #666;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+  
+  .option-container {
+    margin-bottom: 20px;
+  }
+  
+  .option-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 8px;
+  }
+  
+  .custom-segment {
+    background: white;
+    border-radius: 8px;
+    --background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  }
+  
+  ion-segment-button {
+    --background-checked: #333;
+    --color-checked: white;
+    --indicator-color: transparent;
+  }
+  
+  .quantity-container {
+    margin-bottom: 24px;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 8px;
+    padding: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  }
+  
+  .quantity-btn {
+    --padding-start: 8px;
+    --padding-end: 8px;
+    --color: #333;
+  }
+  
+  .quantity-number {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 16px;
+  }
+  
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+  
+  .price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .add-to-cart-btn {
+    --background: #333;
+    --border-radius: 8px;
+    --padding-start: 32px;
+    --padding-end: 32px;
+  }

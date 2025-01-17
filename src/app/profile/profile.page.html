@@ -1,0 +1,102 @@
+<ion-content>
+
+  
+  <div class="profile-container">
+    <div class="profile-pic-container">
+      <div alt="Profile Picture" class="profile-avatar">
+        <img src='assets/Images/latte/pfp.jpg' alt="">
+      </div>
+      <ion-icon class="camera-icon" name="camera-outline" (click)="fileInput.click()"></ion-icon>
+      <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none;">
+    </div>
+    
+    <!-- Welcome Message -->
+    <h3 class="profile-name">Welcome, User!</h3>
+
+    <!-- Options List -->
+    <div class="options-container">
+     
+      <ion-item class="option-item">
+        <div class="icon-container">
+             <ion-icon slot="start" name="person" class="proficon"></ion-icon>
+         </div>
+        <div class="text-container">
+          <ion-label class="text1">Edit Profile</ion-label>
+          <div class="option-description">Update your personal information</div>
+        </div>  
+      </ion-item>
+      
+
+      <!-- Send Feedback Option -->
+      <ion-item class="option-item" >
+        <div class="icon-container">
+          <ion-icon slot="start" name="heart" class="proficon"></ion-icon>
+        </div>
+        <div class="text-container">
+          <ion-label class="text1">Favorites</ion-label>
+          <div class="option-description">favorite food/drinks</div>
+         </div>
+      </ion-item>
+
+      <!-- Back to Dashboard Option -->
+      <ion-item class="option-item" >
+        <div class="icon-container">
+         <ion-icon slot="start" name="time-outline" class="proficon"></ion-icon>
+      </div>
+      <div class="text-container">
+        <ion-label class="text1">Recent Orders</ion-label>
+        <div class="option-description">30 days order history</div>
+      </div>
+      </ion-item>
+
+      <ion-item class="option-item" >
+        <div class="icon-container">
+          <ion-icon slot="start" name="settings" class="proficon"></ion-icon>
+        </div>
+      <div class="text-container">
+        <ion-label class="text1">Settings</ion-label>
+      </div>
+      </ion-item>
+
+      <ion-item class="option-item logout" >
+        <div class="logout-icon-container" routerLink="/signin">
+          <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        </div>
+        <ion-label color="danger">Log Out</ion-label>
+      </ion-item>
+    </div>
+  </div>
+
+
+ 
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="menu">
+        <ion-icon name="restaurant-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="search" class="searchicon">
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="search" class="searchicon">
+        <ion-icon name="home-outline" routerLink="/home"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button tab="order-history" class="histicon">
+        <ion-icon name="time-outline"></ion-icon>
+      </ion-tab-button>
+      
+    </ion-tab-bar>
+  
+    <!-- Floating Button in the center -->
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button >
+        <ion-icon name="person-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-tabs>
+  
+</ion-footer>

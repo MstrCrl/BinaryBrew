@@ -7,7 +7,7 @@
                 <ion-button fill="solid" size="small" class="search-button">
                     <ion-icon name="search-outline"></ion-icon>
                 </ion-button>
-                <ion-button fill="clear" size="small" class="cart-button" routerLink="/signin">
+                <ion-button fill="clear" size="small" class="cart-button" routerLink="/cart">
                     <ion-icon name="cart-outline"></ion-icon>
                 </ion-button>
             </div>
@@ -115,14 +115,14 @@
             <ion-tab-button tab="order-history" class="histicon">
                 <ion-icon name="time-outline"></ion-icon>
             </ion-tab-button>
-            <ion-tab-button tab="profile">
+            <ion-tab-button tab="profile" routerLink="/profile">
                 <ion-icon name="person-outline"></ion-icon>
             </ion-tab-button>
         </ion-tab-bar>
 
         <!-- Floating Button in the center -->
         <ion-fab vertical="bottom" horizontal="center" slot="fixed">
-            <ion-fab-button routerLink="/home">
+            <ion-fab-button routerLink="/shop">
                 <ion-icon name="home-outline"></ion-icon>
             </ion-fab-button>
         </ion-fab>

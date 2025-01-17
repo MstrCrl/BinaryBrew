@@ -1,0 +1,76 @@
+<ion-content>
+  <ion-header class="checkout-header">
+    <ion-button fill="clear" class="back-button" routerLink="/cart">
+      <ion-icon name="arrow-back-outline" ></ion-icon>
+    </ion-button>
+    <h1>CHECK OUT</h1>
+  </ion-header>
+
+  <div class="checkout-container">
+    <div class="address-section">
+      <ion-icon name="location-outline" class="location-icon"></ion-icon>
+      <div class="address-details">
+        <h2>Rolly James Aresga</h2>
+        <p>(+63) 901 131 9001</p>
+        <p>Cariq, Tuguegarao City, Cagayan, Luzon 3500</p>
+      </div>
+    </div>
+
+    <div class="orders-section">
+      <h3>ORDERS</h3>
+      <div class="order-item">
+        <p>Matcha Latte</p>
+        <span class="quantity">Size: Grande</span>
+        <span class="price">₱ 110.00</span>
+      </div>
+      <div class="order-item">
+        <p>Cafe Latte</p>
+        <span class="quantity">Size: Grande</span>
+        <span class="price">₱ 110.00</span>
+      </div>
+    </div>
+
+    <div class="shipping-section">
+      <h3>SHIPPING OPTION</h3>
+      <p>Standard Local</p>
+      <span>₱ 100.00</span>
+    </div>
+
+    <div class="payment-method-section">
+      <h3>PAYMENT METHOD</h3>
+      <div class="payment-method-container" >
+        <ion-item lines="none" class="checkbox-item"  >
+          <ion-checkbox slot="start" class="square-checkbox" ></ion-checkbox>
+          <ion-label >Cash on Delivery</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="checkbox-item">
+          <ion-checkbox slot="start" class="square-checkbox"></ion-checkbox>
+          <ion-label>Online Payment</ion-label>
+        </ion-item>
+        <ion-item lines="none" class="checkbox-item">
+          <ion-checkbox slot="start" class="square-checkbox"></ion-checkbox>
+          <ion-label>Card</ion-label>
+        </ion-item>
+      </div>
+    </div>
+    
+
+    <div class="payment-details-section">
+      <h3>PAYMENT DETAILS</h3>
+      <div class="details-item">
+        <p>Subtotal</p>
+        <span>₱ 220.00</span>
+      </div>
+      <div class="details-item">
+        <p>Shipping Fee</p>
+        <span>₱ 100.00</span>
+      </div>
+      <div class="details-item total">
+        <p>Total (2 items)</p>
+        <span>₱ 320.00</span>
+      </div>
+    </div>
+
+    <ion-button expand="block" class="checkout-button">CHECK OUT</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,72 @@
+<!--
+<ion-content>
+  <div class="container">
+    <div class="product-list">
+      <div *ngFor="let coffee of coffeeProducts" 
+           class="product-card"
+           [class.selected]="selectedCoffee?.id === coffee.id"
+           (click)="selectCoffee(coffee)">
+        <div class="product-thumbnail">
+          <ion-img [src]="coffee.image"></ion-img>
+        </div>
+        <div class="product-name">{{ coffee.name }}</div>
+      </div>
+    </div>
+
+    <div class="product-detail" *ngIf="selectedCoffee">
+      <div class="featured-image-container">
+        <ion-img [src]="selectedCoffee.image"></ion-img>
+      </div>
+
+      <div class="details-container">
+        <h2 class="product-title">{{ selectedCoffee.name }}</h2>
+        <p class="description">{{ selectedCoffee.description }}</p>
+
+        <div class="option-container">
+          <div class="option-label">Temperature</div>
+          <ion-segment value="hot" class="custom-segment">
+            <ion-segment-button value="hot">
+              <ion-label>Hot</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="cold">
+              <ion-label>Cold</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+
+        <div class="option-container">
+          <div class="option-label">Size</div>
+          <ion-segment value="grande" class="custom-segment">
+            <ion-segment-button value="grande">
+              <ion-label>Grande</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="venti">
+              <ion-label>Venti</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+
+        <div class="quantity-container">
+          <div class="option-label">Quantity</div>
+          <div class="quantity-controls">
+            <ion-button fill="clear" class="quantity-btn">
+              <ion-icon name="remove-outline"></ion-icon>
+            </ion-button>
+            <span class="quantity-number">1</span>
+            <ion-button fill="clear" class="quantity-btn">
+              <ion-icon name="add-outline"></ion-icon>
+            </ion-button>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="price">${{ selectedCoffee.price }}</div>
+          <ion-button expand="block" class="add-to-cart-btn">
+            Add to Cart
+          </ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+-->
